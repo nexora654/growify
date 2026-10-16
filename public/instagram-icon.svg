@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="ig-gradient-fill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#731f9c" />
+      <stop offset="25%" stop-color="#9e1e6c" />
+      <stop offset="50%" stop-color="#b82156" />
+      <stop offset="75%" stop-color="#cc4a2c" />
+      <stop offset="100%" stop-color="#db7e26" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Outer squircle with vibrant brand gradient -->
+  <rect x="0" y="0" width="512" height="512" rx="122" ry="122" fill="url(#ig-gradient-fill)" />
+  
+  <!-- Pure white inner canvas -->
+  <rect x="46" y="46" width="420" height="420" rx="76" ry="76" fill="#ffffff" />
+  
+  <!-- Center camera lens ring -->
+  <circle cx="256" cy="256" r="106" fill="none" stroke="url(#ig-gradient-fill)" stroke-width="46" />
+  
+  <!-- Top-right flash dot -->
+  <circle cx="388" cy="124" r="31" fill="url(#ig-gradient-fill)" />
+</svg>

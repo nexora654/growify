@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    min-width: 320px;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Optimize touch target feedback on mobile devices */
+  button, a, input, select, textarea {
+    touch-action: manipulation;
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.03); }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s ease-in-out infinite;
+}
+
+/* Instagram-style language picker scrollbar */
+.custom-lang-scrollbar::-webkit-scrollbar {
+  width: 14px;
+}
+.custom-lang-scrollbar::-webkit-scrollbar-track {
+  background: #333333;
+}
+.custom-lang-scrollbar::-webkit-scrollbar-thumb {
+  background: #888888;
+  border-radius: 7px;
+  border: 2px solid #333333;
+}
+.custom-lang-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #aaaaaa;
+}
+.custom-lang-scrollbar::-webkit-scrollbar-button:single-button:vertical:decrement {
+  height: 12px;
+  width: 14px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #333333;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 24 24' fill='%23cccccc'><polygon points='12 5 3 19 21 19'/></svg>");
+}
+.custom-lang-scrollbar::-webkit-scrollbar-button:single-button:vertical:increment {
+  height: 12px;
+  width: 14px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #333333;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 24 24' fill='%23cccccc'><polygon points='12 19 3 5 21 5'/></svg>");
+}
+
